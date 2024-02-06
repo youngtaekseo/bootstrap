@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>        
+    <title>Document</title>      
+</head>
+<body>
+    <form action="#" method="post">
+        <div class="container">
+            <div class="row gy-2 justify-content-center">
+                <!-- 로고 -->
+                <div class="col-12">
+                    <img src="./images/face.jpg" class="rounded mx-auto d-block" alt="...">          
+                </div>              
+
+                <!-- UserName -->
+                <div class="col-12 m-3">
+                    <input type="text" 
+                            class="form-control"  
+                            data-bs-toggle="tooltip" 
+                            data-bs-placement="top"
+                            data-bs-title="사용자 ID 입력"
+                            placeholder="UserName" 
+                            aria-label="ID" 
+                            aria-describedby="basic-addon1">
+                </div>   
+                
+                <!-- PassWord -->
+                <div class="col-12 m-3">
+                    <input type="text" 
+                            class="form-control"  
+                            data-bs-toggle="tooltip" 
+                            data-bs-placement="top"
+                            data-bs-title="사용자 비밀번호 입력"
+                            placeholder="PassWord" 
+                            aria-label="PW" 
+                            aria-describedby="basic-addon1"> 
+                </div>  
+                
+                <!-- Auto login -->
+                <div class="col-12">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Auto login</label>
+                    </div>      
+                </div>  
+                
+                <!-- Login -->
+                <div class="col-12">
+                    <div class="d-grid">
+                        <button class="btn bg-secondary text-white" type="button">Login</button>
+                    </div>    
+                </div>   
+                
+                <!-- Find Id/Password -->
+                <div class="col-12 text-center">
+                    <a class="link-opacity-10-hover" href="#">Find Id/Password</a>
+                </div>   
+                
+                <!-- Naver, Kakao, Google, FaceBook -->
+                <div class="col-12">
+                    <hr>
+                    <div class="d-grid gap-2 mx-auto">
+                        <button class="btn text-white"
+                                data-bs-toggle="tooltip" 
+                                data-bs-placement="top"
+                                data-bs-title="Naver 로그인"
+                                type="button" style="background-color: green;">Naver</button>
+                        <button class="btn text-black" 
+                                data-bs-toggle="tooltip" 
+                                data-bs-placement="top"
+                                data-bs-title="Kakao 로그인"
+                                type="button" style="background-color: yellow;">Kakao</button>
+                        <button class="btn text-white" 
+                                data-bs-toggle="tooltip" 
+                                data-bs-placement="top"
+                                data-bs-title="Google 로그인"
+                                type="button" style="background-color: red;">Google</button>
+                        <button class="btn text-white" 
+                                data-bs-toggle="tooltip" 
+                                data-bs-placement="top"
+                                data-bs-title="FaceBook 로그인"
+                                type="button" style="background-color: royalblue;">FaceBook</button>
+                    </div>   
+                </div>       
+            </div>           
+        </div>
+    </form>
+
+	<script>
+		// Initialize tooltips
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+			return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+	</script>    
+</body>
+</html>
