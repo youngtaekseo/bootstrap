@@ -11,6 +11,11 @@
             box-sizing: content-box;
         } */
 
+        ul {
+            list-style-type: none;
+            /* padding: 10px; */
+        }
+
         .btn {
             text-align: left;
         }
@@ -26,36 +31,164 @@
     <header>
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="#">
                 <img src="./images/face.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> Admin
-              </a>
+                </a>
             </div>
-          </nav>
+        </nav>
     </header>
 
     <!-- 본문 -->
     <section style="height: 1300px;">
         <div class="container-fluid">
             <div class="row gy-1">
-                <div class="col-1">
-                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                        <div class="btn-group dropend" role="group">
-                            <button type="button" class="btn">Home</button>
-                        </div>
+                <div class="col-2">
+                    <div class="mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                        </svg>
+                        <a class="link-dark link-underline link-underline-opacity-0" href="#">Home</a>
+                    </div>
 
-                        <div class="btn-group dropend" role="group">
-                            <button type="button" class="btn">공지사항</button>
-                        </div>    
-                        
-                        <div class="btn-group dropend" role="group">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">회원관리</button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">회원조회</a></li>
-                                <li><a class="dropdown-item" href="#">회원등록</a></li>
+                    <div class="mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
+                        </svg>
+                        <a class="link-dark link-underline link-underline-opacity-0" href="#">공지사항</a>
+                    </div>
+
+                    <div class="mb-3">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
+                            </svg>                                      
+                        </span>
+                        <a class="link-dark link-underline link-underline-opacity-0" href="#member" data-bs-toggle="collapse">회원관리</a>
+                        <div id="member" class="collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;회원조회</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;회원등록</a>
+                                </li>   
                             </ul>
                         </div>
                     </div>
+
+                    <div class="mb-3">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
+                            </svg>                                      
+                        </span>
+                        <a class="link-dark link-underline link-underline-opacity-0" href="#sponser" data-bs-toggle="collapse">스폰서관리</a>
+                        <div id="sponser" class="collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;스폰서조회</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;스폰서등록</a>
+                                </li>   
+                            </ul>
+                        </div>
+                    </div>   
+
+                    <div class="mb-3">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid" viewBox="0 0 16 16">
+                                <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z"/>
+                            </svg>                                     
+                        </span>
+                        <a class="link-dark link-underline link-underline-opacity-0" href="#ad" data-bs-toggle="collapse">광고관리</a>
+                        <div id="ad" class="collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;광고조회</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;광고등록</a>
+                                </li>   
+                            </ul>
+                        </div>
+                    </div> 
+
+                    <div class="mb-3">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-display" viewBox="0 0 16 16">
+                                <path d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4q0 1 .25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75Q6 13 6 12H2s-2 0-2-2zm1.398-.855a.76.76 0 0 0-.254.302A1.5 1.5 0 0 0 1 4.01V10c0 .325.078.502.145.602q.105.156.302.254a1.5 1.5 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.76.76 0 0 0 .254-.302 1.5 1.5 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.76.76 0 0 0-.302-.254A1.5 1.5 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145"/>
+                            </svg>                                    
+                        </span>
+                        <a class="link-dark link-underline link-underline-opacity-0" href="#service" data-bs-toggle="collapse">서비스관리</a>
+                        <div id="service" class="collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;서비스조회</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;서비스등록</a>
+                                </li>   
+                            </ul>
+                        </div>
+                    </div>    
+
+                    <div class="mb-3">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                            </svg>                                      
+                        </span>
+                        <a class="link-dark link-underline link-underline-opacity-0" href="#communication" data-bs-toggle="collapse">커뮤니케이션</a>
+                        <div id="communication" class="collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;채팅창열기</a>
+                                </li>   
+                            </ul>
+                        </div>
+                    </div> 
+
+                    <div class="mb-3">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+                                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+                            </svg>                                     
+                        </span>
+                        <a class="link-dark link-underline link-underline-opacity-0" href="#system" data-bs-toggle="collapse">시스템관리</a>
+                        <div id="system" class="collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;사용자조회</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;사용자등록</a>
+                                </li>   
+                            </ul>
+                        </div>
+                    </div> 
+
+                    <div class="mb-3">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                            </svg>                                    
+                        </span>
+                        <a class="link-dark link-underline link-underline-opacity-0" href="#userinfo" data-bs-toggle="collapse">개인정보관리</a>
+                        <div id="userinfo" class="collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;개인정보조회</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;개인정보등록</a>
+                                </li>   
+                            </ul>
+                        </div>
+                    </div>                    
                 </div>
+
                 <div class="col">
                     <div class="row bg-body-secondary" style="height: 1300px;">
                         <div class="col-12 mt-3">
@@ -75,7 +208,7 @@
                                 <div class="h4 mt-3">
                                     &nbsp;&nbsp;기본정보
                                 </div>
-                                
+
                                 <div class="bg-white" style="height: 1100px;">
                                     <div class="row mb-3">
                                         <div class="col-3">
@@ -89,7 +222,7 @@
                                             <label class="form-label" for="">소셜아이디</label>
                                             <input type="text" class="form-control" placeholder="영대소문자,숫자" aria-label="영대소문자,숫자">
                                         </div>
-                                        
+
                                         <div class="col-3">
                                             <label class="form-label" for="">소셜</label>
                                             <select class="form-select" id="floatingSelect" aria-label="소셜">
@@ -99,12 +232,12 @@
                                                 <option value="3">Three</option>
                                             </select>
                                         </div>
-                                        
+
                                         <div class="col-3">
                                             <label class="form-label" for="">이름</label>
                                             <input type="text" class="form-control" placeholder="영대소문자,숫자" aria-label="영대소문자,숫자">
                                         </div>
-                                        
+
                                         <div class="col-3">
                                             <label class="form-label" for="">성별</label>
                                             <select class="form-select" id="floatingSelect" aria-label="소셜">
@@ -120,12 +253,12 @@
                                             <label class="form-label" for="">출생일</label>
                                             <input type="text" class="form-control" placeholder="영대소문자,숫자" aria-label="영대소문자,숫자">
                                         </div>
-                                        
+
                                         <div class="col-3">
                                             <label class="form-label" for="">이메일</label>
                                             <input type="text" class="form-control" placeholder="영대소문자,숫자" aria-label="영대소문자,숫자">
                                         </div>
-                                        
+
                                         <div class="col-3">
                                             <label class="form-label" for="">전화번호</label>
                                             <input type="text" class="form-control" placeholder="영대소문자,숫자" aria-label="영대소문자,숫자">
@@ -141,7 +274,7 @@
                                                 <option value="2">경기</option>
                                             </select>
                                         </div>
-                                        
+
                                         <div class="col-3">
                                             <label class="form-label" for="">자택지역2</label>
                                             <select class="form-select" id="floatingSelect" aria-label="소셜">
@@ -150,7 +283,7 @@
                                                 <option value="2">경기</option>
                                             </select>
                                         </div>
-                                        
+
                                         <div class="col-3">
                                             <label class="form-label" for="">사무실지역1</label>
                                             <select class="form-select" id="floatingSelect" aria-label="소셜">
@@ -175,15 +308,19 @@
                                             <label class="form-label" for="">우편번호</label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control" placeholder="숫자만" aria-label="영대소문자,숫자">
-                                                <span class="input-group-text">X</span>
+                                                <span class="input-group-text" id="basic-addon1">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                                                    </svg>
+                                                </span>                                                
                                             </div>
                                         </div>
-                                        
+
                                         <div class="col-3">
                                             <label class="form-label" for="">주소</label>
                                             <input type="text" class="form-control" placeholder="숫자만" aria-label="영대소문자,숫자">
                                         </div>
-                                        
+
                                         <div class="col-3">
                                             <label class="form-label" for="">상세주소</label>
                                             <input type="text" class="form-control" placeholder="숫자만" aria-label="영대소문자,숫자">
@@ -203,7 +340,7 @@
                                                 <option value="2">X</option>
                                             </select>
                                         </div>
-                                        
+
                                         <div class="col-3">
                                             <label class="form-label" for="">개인정보</label>
                                             <select class="form-select" id="floatingSelect" aria-label="개인정보">
@@ -211,7 +348,7 @@
                                                 <option value="2">X</option>
                                             </select>
                                         </div>
-                                        
+
                                         <div class="col-3">
                                             <label class="form-label" for="">위치정보</label>
                                             <select class="form-select" id="floatingSelect" aria-label="위치정보">
@@ -237,7 +374,7 @@
                                                 <option value="2">X</option>
                                             </select>
                                         </div>
-                                        
+
                                         <div class="col-3">
                                             <label class="form-label" for="">앱공지</label>
                                             <select class="form-select" id="floatingSelect" aria-label="앱공지">
@@ -245,7 +382,7 @@
                                                 <option value="2">X</option>
                                             </select>
                                         </div>
-                                        
+
                                         <div class="col-3">
                                             <label class="form-label" for="">앱탈퇴</label>
                                             <select class="form-select" id="floatingSelect" aria-label="앱탈퇴">
@@ -260,15 +397,19 @@
                                             <label class="form-label" for="">우편번호</label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control" placeholder="숫자만" aria-label="숫자만">
-                                                <span class="input-group-text">X</span>
+                                                <span class="input-group-text" id="basic-addon2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                                                    </svg>
+                                                </span>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="col-3">
                                             <label class="form-label" for="">주소</label>
                                             <input type="text" class="form-control" placeholder="숫자만" aria-label="숫자만">
                                         </div>
-                                        
+
                                         <div class="col-3">
                                             <label class="form-label" for="">상세주소</label>
                                             <input type="text" class="form-control" placeholder="숫자만" aria-label="숫자만">
@@ -289,12 +430,12 @@
                                                 <option value="2">iOS</option>
                                             </select>
                                         </div>
-                                        
+
                                         <div class="col-3">
                                             <label class="form-label" for="">모바일토큰</label>
                                             <input type="text" class="form-control" placeholder="숫자만" aria-label="숫자만">
                                         </div>
-                                        
+
                                         <div class="col-3">
                                             <label class="form-label" for="">FCM토큰</label>
                                             <input type="text" class="form-control" placeholder="숫자만" aria-label="숫자만">
