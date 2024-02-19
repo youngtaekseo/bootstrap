@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./assets/css/tailwind.output.css">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="./assets/js/init-alpine.js"></script>
+    <!-- You need focus-trap.js to make the modal accessible -->
+    <script src="./assets/js/focus-trap.js" defer></script>
 
     <!-- DateTimepicker 관련 CDN -->
     <!-- 플러그인에서 제공해주는 css 로딩 -->
@@ -42,7 +44,7 @@
             class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
             href="#"
           >
-            Windmill
+            Ramses
           </a>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
@@ -284,14 +286,14 @@
               </template>
             </li>
           </ul>
-          <div class="px-6 my-6">
+          <!-- <div class="px-6 my-6">
             <button
               class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
             >
               Create account
               <span class="ml-2" aria-hidden="true">+</span>
             </button>
-          </div>
+          </div> -->
         </div>
       </aside>
       <!-- Mobile sidebar -->
@@ -605,7 +607,7 @@
                 class="relative w-full max-w-xl mr-6 focus-within:text-purple-500"
               >
                 <div class="absolute inset-y-0 flex items-center pl-2">
-                  <svg
+                  <!-- <svg
                     class="w-4 h-4"
                     aria-hidden="true"
                     fill="currentColor"
@@ -616,14 +618,14 @@
                       d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                       clip-rule="evenodd"
                     ></path>
-                  </svg>
+                  </svg> -->
                 </div>
-                <input
+                <!-- <input
                   class="w-full pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input"
                   type="text"
                   placeholder="Search for projects"
                   aria-label="Search"
-                />
+                /> -->
               </div>
             </div>
             <ul class="flex items-center flex-shrink-0 space-x-6">
@@ -841,9 +843,9 @@
 
             <!-- 검색조건 -->
             <div class="w-full px-4 py-3 mb-8 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                <div class="flex flex-col overflow-y-auto md:flex-row mt-4">
+                <div class="flex flex-col md:flex-row mt-4">
                     <!-- 삭제여부 -->
-                    <div class="md:h-auto md:w-1 mr-3">
+                    <div class="md:h-auto md:w-1/2 mr-3">
                         <select 
                             class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
                             <option value="" selected>삭제여부</option>
@@ -853,7 +855,7 @@
                     </div>
 
                     <!-- 일자조건 -->
-                    <div class="md:h-auto md:w-1 mr-3">
+                    <div class="md:h-auto md:w-1/2 mr-3">
                         <select class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
                             <option value="0" selected>등록일</option>
                             <option value="1">수정일</option>
@@ -861,27 +863,27 @@
                     </div>
 
                     <!-- 시작일자 -->
-                    <div class="md:h-auto md:w-1 mr-3">
+                    <div class="md:h-auto md:w-1/2 mr-3">
                         <input
                             id="shDateStart"
-                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input datepicker"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                             placeholder="시작일"
                         >
                     </div>
 
                     <!-- 수정일자 -->
-                    <div class="md:h-auto md:w-1 mr-3">
+                    <div class="md:h-auto md:w-1/2 mr-3">
                         <input
                             id="shDateEnd"
-                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input datepicker"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                             placeholder="종료일"
                         >                   
                     </div>
                 </div>  
 
-                <div class="flex flex-col overflow-y-auto md:flex-row">
+                <div class="flex flex-col md:flex-row mt-4">
                     <!-- 검색구분 -->
-                    <div class="md:h-auto md:w-1 mr-3">
+                    <div class="md:h-auto md:w-1/2 mr-3">
                         <select
                             class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
                             <option value="" selected>검색구분</option>
@@ -892,41 +894,79 @@
                     </div> 
 
                     <!-- 검색어 -->
-                    <div class="md:h-auto md:w-1 mr-3">
+                    <div class="md:h-auto md:w-1/2 mr-3">
                         <input 
                             class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                             placeholder="검색어"
                         >
-                    </div>                  
+                    </div> 
+                    
+                    <div class="md:h-auto md:w-1/2 mr-3"></div>
+                    <div class="md:h-auto md:w-1/2 mr-3"></div>
                 </div>                 
                 
-                <div class="flex flex-col overflow-y-auto md:flex-row mt-4">
+                <div class="flex flex-col overflow-y-auto md:flex-row mt-6">
                     <!-- 조회버튼 -->
-                    <button class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple mr-3"
-                            aria-label="Edit">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                        </svg>
-                        &nbsp;조&nbsp;&nbsp;&nbsp;회&nbsp;
-                    </button>
+                    <button
+                      class="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple mr-3"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                      </svg>
+                      <span>&nbsp;조&nbsp;&nbsp;&nbsp;회&nbsp;</span>
+                  </button>                    
 
                     <!-- 초기화버튼 -->
-                    <button class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
-                            aria-label="Edit">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
-                            <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>
-                        </svg>
-                        &nbsp;초기화&nbsp;
-                    </button>
+                    <button
+                      class="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
+                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>
+                      </svg>
+                      <span>&nbsp;초기화&nbsp;</span>
+                  </button>                     
                 </div>                 
             </div>   
             
+            <!-- <div
+              class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase sm:grid-cols-9 dark:text-gray-400"
+            >              
+              <span class="col-span-1 sm:mt-auto">
+                <p>Total:3</p>
+              </span>
+              <span class="col-span-4"></span>
+              <span class="flex col-span-4 sm:mt-auto sm:justify-end">
+                <select
+                  class="block text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+                  <option value="0" selected>10</option>
+                  <option value="1">20</option>
+                  <option value="2">30</option>
+                  <option value="3">40</option>
+                </select>                   
+              </span>
+            </div>         -->
+
+            <div class="flex flex-col md:flex-row mb-4">
+              <div class="md:h-auto sm:mt-auto md:w-1/2">
+                <p>Total:3</p>
+              </div>
+              <div class="flex md:h-auto sm:mt-auto md:w-1/2 sm:justify-end">
+                <select
+                  class="block text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+                  <option value="0" selected>10</option>
+                  <option value="1">20</option>
+                  <option value="2">30</option>
+                  <option value="3">40</option>
+                </select> 
+              </div>               
+            </div>
+
             <!-- 조회결과 리스트 -->
             <div class="w-full overflow-hidden rounded-lg shadow-xs">
               <div class="w-full overflow-x-auto">
                 <table class="w-full whitespace-no-wrap">
-                <!-- 조회결과 리스트 타이틀-->
+                  <!-- 조회결과 리스트 타이틀-->
                   <thead>
                     <tr
                       class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
@@ -938,8 +978,9 @@
                       <th class="px-4 py-3">Actions</th>
                     </tr>
                   </thead>
-                  <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-                    <!-- 조회결과 리스트 내용 -->
+                  
+                  <!-- 조회결과 리스트 내용 -->
+                  <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">  
                     <tr class="text-gray-700 dark:text-gray-400">
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
@@ -997,6 +1038,7 @@
                             </svg>
                           </button>
                           <button
+                            @click="openModal"
                             class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                             aria-label="Delete"
                           >
@@ -1012,7 +1054,7 @@
                                 clip-rule="evenodd"
                               ></path>
                             </svg>
-                          </button>
+                          </button>                           
                         </div>
                       </td>
                     </tr>
@@ -1074,6 +1116,7 @@
                             </svg>
                           </button>
                           <button
+                            @click="openModal"
                             class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                             aria-label="Delete"
                           >
@@ -1151,6 +1194,7 @@
                             </svg>
                           </button>
                           <button
+                            @click="openModal"
                             class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                             aria-label="Delete"
                           >
@@ -1228,6 +1272,7 @@
                             </svg>
                           </button>
                           <button
+                            @click="openModal"
                             class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                             aria-label="Delete"
                           >
@@ -1305,6 +1350,7 @@
                             </svg>
                           </button>
                           <button
+                            @click="openModal"
                             class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                             aria-label="Delete"
                           >
@@ -1382,6 +1428,7 @@
                             </svg>
                           </button>
                           <button
+                            @click="openModal"
                             class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                             aria-label="Delete"
                           >
@@ -1459,6 +1506,7 @@
                             </svg>
                           </button>
                           <button
+                            @click="openModal"
                             class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                             aria-label="Delete"
                           >
@@ -1536,6 +1584,7 @@
                             </svg>
                           </button>
                           <button
+                            @click="openModal"
                             class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                             aria-label="Delete"
                           >
@@ -1613,6 +1662,7 @@
                             </svg>
                           </button>
                           <button
+                            @click="openModal"
                             class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                             aria-label="Delete"
                           >
@@ -1638,9 +1688,20 @@
               <div
                 class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800"
               >
-                <span class="flex items-center col-span-3">
-                  Showing 21-30 of 100
+                <span class="col-span-1 mr-2">
+                  <select
+                    class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+                    <option value="0" selected>10</option>
+                    <option value="1">20</option>
+                    <option value="2">30</option>
+                    <option value="3">40</option>
+                  </select>                   
                 </span>
+
+                <span class="col-span-2">
+                  <!-- Showing 21-30 of 100 -->
+                </span>
+
                 <span class="col-span-2"></span>
                 <!-- Pagination -->
                 <span class="flex col-span-4 mt-2 sm:mt-auto sm:justify-end">
@@ -1736,5 +1797,83 @@
         </main>
       </div>
     </div>
+
+    <!-- Modal backdrop. This what you want to place close to the closing body tag -->
+    <div
+      x-show="isModalOpen"
+      x-transition:enter="transition ease-out duration-150"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="transition ease-in duration-150"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+      class="fixed inset-0 z-30 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center"
+    >
+      <!-- Modal -->
+      <div
+        x-show="isModalOpen"
+        x-transition:enter="transition ease-out duration-150"
+        x-transition:enter-start="opacity-0 transform translate-y-1/2"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0  transform translate-y-1/2"
+        @click.away="closeModal"
+        @keydown.escape="closeModal"
+        class="w-full px-6 py-4 overflow-hidden bg-white rounded-t-lg dark:bg-gray-800 sm:rounded-lg sm:m-4 sm:max-w-xl"
+        role="dialog"
+        id="modal"
+      >
+        <!-- Remove header if you don't want a close icon. Use modal body to place modal tile. -->
+        <header class="flex justify-end">
+          <button
+            class="inline-flex items-center justify-center w-6 h-6 text-gray-400 transition-colors duration-150 rounded dark:hover:text-gray-200 hover: hover:text-gray-700"
+            aria-label="close"
+            @click="closeModal"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              role="img"
+              aria-hidden="true"
+            >
+              <path
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </header>
+        <!-- Modal body -->
+        <div class="mt-4 mb-6">
+          <!-- Modal title -->
+          <p class="mb-2 text-lg font-semibold text-gray-700 dark:text-gray-300">
+            삭제확인
+          </p>
+          <!-- Modal description -->
+          <p class="text-sm text-gray-700 dark:text-gray-400">
+            삭제을 진행 하시겠습니까?
+          </p>
+        </div>
+        <footer
+          class="flex flex-col items-center justify-end px-6 py-3 -mx-6 -mb-4 space-y-4 sm:space-y-0 sm:space-x-6 sm:flex-row bg-gray-50 dark:bg-gray-800"
+        >
+          <button
+            @click="closeModal"
+            class="w-full px-5 py-3 text-sm font-medium leading-5 text-white text-gray-700 transition-colors duration-150 border border-gray-300 rounded-lg dark:text-gray-400 sm:px-4 sm:py-2 sm:w-auto active:bg-transparent hover:border-gray-500 focus:border-gray-500 active:text-gray-500 focus:outline-none focus:shadow-outline-gray"
+          >
+            취소
+          </button>
+          <button
+            class="w-full px-5 py-3 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg sm:w-auto sm:px-4 sm:py-2 active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+          >
+            삭제
+          </button>
+        </footer>
+      </div>
+    </div>
+    <!-- End of modal backdrop -->    
   </body>
 </html>
