@@ -605,7 +605,7 @@
                 class="relative w-full max-w-xl mr-6 focus-within:text-purple-500"
               >
                 <div class="absolute inset-y-0 flex items-center pl-2">
-                  <svg
+                  <!-- <svg
                     class="w-4 h-4"
                     aria-hidden="true"
                     fill="currentColor"
@@ -616,14 +616,14 @@
                       d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                       clip-rule="evenodd"
                     ></path>
-                  </svg>
+                  </svg> -->
                 </div>
-                <input
+                <!-- <input
                   class="w-full pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input"
                   type="text"
                   placeholder="Search for projects"
                   aria-label="Search"
-                />
+                /> -->
               </div>
             </div>
             <ul class="flex items-center flex-shrink-0 space-x-6">
@@ -843,7 +843,7 @@
             <div class="w-full px-4 py-3 mb-8 bg-white rounded-lg shadow-xs dark:bg-gray-800">
                 <div class="flex flex-col overflow-y-auto md:flex-row mt-4">
                     <!-- 삭제여부 -->
-                    <div class="md:h-auto md:w-1 mr-3">
+                    <div class="md:h-auto md:w-1/2 mr-3">
                         <select 
                             class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
                             <option value="" selected>삭제여부</option>
@@ -853,7 +853,7 @@
                     </div>
 
                     <!-- 일자조건 -->
-                    <div class="md:h-auto md:w-1 mr-3">
+                    <div class="md:h-auto md:w-1/2 mr-3">
                         <select class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
                             <option value="0" selected>등록일</option>
                             <option value="1">수정일</option>
@@ -861,7 +861,7 @@
                     </div>
 
                     <!-- 시작일자 -->
-                    <div class="md:h-auto md:w-1 mr-3">
+                    <div class="md:h-auto md:w-1/2 mr-3">
                         <input
                             id="shDateStart"
                             class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input datepicker"
@@ -870,7 +870,7 @@
                     </div>
 
                     <!-- 수정일자 -->
-                    <div class="md:h-auto md:w-1 mr-3">
+                    <div class="md:h-auto md:w-1/2 mr-3">
                         <input
                             id="shDateEnd"
                             class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input datepicker"
@@ -881,7 +881,7 @@
 
                 <div class="flex flex-col overflow-y-auto md:flex-row">
                     <!-- 검색구분 -->
-                    <div class="md:h-auto md:w-1 mr-3">
+                    <div class="md:h-auto md:w-1/2 mr-3">
                         <select
                             class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
                             <option value="" selected>검색구분</option>
@@ -892,12 +892,15 @@
                     </div> 
 
                     <!-- 검색어 -->
-                    <div class="md:h-auto md:w-1 mr-3">
+                    <div class="md:h-auto md:w-1/2 mr-3">
                         <input 
                             class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                             placeholder="검색어"
                         >
-                    </div>                  
+                    </div> 
+                    
+                    <div class="md:h-auto md:w-1/2 mr-3"></div>
+                    <div class="md:h-auto md:w-1/2 mr-3"></div>
                 </div>                 
                 
                 <div class="flex flex-col overflow-y-auto md:flex-row mt-4">
