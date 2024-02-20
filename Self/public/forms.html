@@ -817,145 +817,228 @@
             </ul>
           </div>
         </header>
+
         <main class="h-full pb-16 overflow-y-auto">
-          <div class="container px-6 mx-auto grid">
-            <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-              회원등록
-            </h2>
+          <form name="regForm" id="regForm" action="" method="post">
+            <div class="container px-6 mx-auto grid">
+              <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+                회원등록
+              </h2>
+  
+              <!-- 기본정보 -->
+              <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
+                기본정보
+              </h4>            
+              <div class="w-full px-4 py-3 mb-8 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                <div class="flex flex-col md:flex-row mt-4 mb-4">
+                  <div class="md:h-auto mr-3 md:w-1/2">
+                    <label class="block text-sm">
+                      <span class="text-gray-700 dark:text-gray-400">이름</span>
+                      <input
+                          id="inName"
+                          class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                          required
+                          autocomplete="off"
+                      >                    
+                      <span id="lblName" class="text-xs text-red-600 dark:text-red-400">
+                        
+                      </span>                    
+                    </label>
+                  </div>
+  
+                  <div class="md:h-auto mr-3 md:w-1/2">
+                    <label class="block text-sm">
+                      <span class="text-gray-700 dark:text-gray-400">전화번호</span>
+                      <input
+                          id="inPhone"
+                          class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                          placeholder="숫자만"
+                          autocomplete="off"
+                          required
+                      >                    
+                    </label>
+                  </div>
+                </div> 
+  
+                <div class="flex flex-col md:flex-row mt-4 mb-4">
+                  <div class="md:h-auto mr-3 md:w-1/2">
+                    <label class="block text-sm">
+                      <span class="text-gray-700 dark:text-gray-400">주소</span>
+                      <input
+                          class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input datepicker"
+                          placeholder="주소"
+                          autocomplete="off"
+                      >                    
+                    </label>
+                  </div>
+  
+                  <div class="md:h-auto mr-3 md:w-1/2">
+                    <label class="block text-sm">
+                      <span class="text-gray-700 dark:text-gray-400">상세주소</span>
+                      <input
+                          class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input datepicker"
+                          placeholder="상세주소"
+                          autocomplete="off"
+                      >                    
+                    </label>
+                  </div>
+                </div>               
+              </div>
+  
+              <!-- 추가정보 -->
+              <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
+                추가정보
+              </h4>
+              <div class="w-full px-4 py-3 mb-8 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                <div class="flex flex-col md:flex-row mt-4">
+                  <div class="md:h-auto mr-3 md:w-1/2">
+                    <label class="block text-sm">
+                      <span class="text-gray-700 dark:text-gray-400">취미</span>
+                      <input
+                          class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input datepicker"
+                          placeholder="운동, 여행"
+                          autocomplete="off"
+                      >                    
+                    </label>
+                  </div>
+  
+                  <div class="md:h-auto mr-3 md:w-1/2">
+                    <label class="block text-sm">
+                      <span class="text-gray-700 dark:text-gray-400">종교</span>
+                      <input
+                          class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input datepicker"
+                          placeholder="불교, 기독교, 천주교, 기타"
+                          autocomplete="off"
+                      >                    
+                    </label>
+                  </div>
+                </div> 
+  
+                <div class="flex flex-col md:flex-row mt-4">
+                  <div class="md:h-auto mr-3 md:w-1/2">
+                    <label class="block text-sm">
+                      <span class="text-gray-700 dark:text-gray-400">좌우명</span>
+                      <input
+                          class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input datepicker"
+                          placeholder=""
+                          autocomplete="off"
+                      >                    
+                    </label>
+                  </div>
+  
+                  <div class="md:h-auto mr-3 md:w-1/2">
+                    <label class="block text-sm">
+                      <span class="text-gray-700 dark:text-gray-400">결혼여부</span>
+                      <select class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+                        <option value="0" selected>기혼</option>
+                        <option value="1">미혼</option>
+                    </select>                   
+                    </label>
+                  </div>
+                </div>               
+              </div>    
+              
+              <script>
+                function fnSave() {
+                  let inName  = document.getElementById("inName");
+                  let inPhone = document.getElementById("inPhone");
+                  let valueChk = false;
 
-            <!-- 기본정보 -->
-            <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
-              기본정보
-            </h4>            
-            <div class="w-full px-4 py-3 mb-8 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                  if (inName.value == "") {
+                    // inName.focus;
+                    inName.setAttribute("class","block w-full mt-1 text-sm border-red-600 dark:text-gray-300 dark:bg-gray-700 focus:border-red-400 focus:outline-none focus:shadow-outline-red form-input");
+                    inName.setAttribute("placeholder","이름을 입력하세요!");
+                    valueChk = true;
+                    // return; // function sendit() 종료, 아래로 진행되지 않는다, input type="button" 일때 return; 사용한다
+                  } else {
+                    inName.setAttribute("class","block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input");
+                    inName.setAttribute("placeholder","");
+                  }
+
+                  if (inPhone.value == "") {
+                    // inPhone.focus;
+                    inPhone.setAttribute("class","block w-full mt-1 text-sm border-red-600 dark:text-gray-300 dark:bg-gray-700 focus:border-red-400 focus:outline-none focus:shadow-outline-red form-input");
+                    inPhone.setAttribute("placeholder","전화번호를 입력하세요!");
+                    valueChk = true;
+                    // return; // function sendit() 종료, 아래로 진행되지 않는다, input type="button" 일때 return; 사용한다
+                  } else {
+                    inPhone.setAttribute("class","block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input");
+                    inPhone.setAttribute("placeholder","숫자만");
+                  }                  
+
+                  if (valueChk == true) {
+                    return;
+                  }
+
+                  document.getElementById("regForm").submit();
+                };              
+              </script>
+
+              <!-- 저장버튼, 회원조회버튼 -->
               <div class="flex flex-col md:flex-row mt-4">
-                <div class="md:h-auto mr-3 md:w-1/2">
-                  <label class="block text-sm">
-                    <span class="text-gray-700 dark:text-gray-400">이름</span>
-                    <input
-                        class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                        placeholder="홍길동"
-                        required
-                    >                    
-                    <!-- <span class="text-xs text-red-600 dark:text-red-400">
-                      Your password is too short.
-                    </span>                     -->
-                  </label>
-                </div>
-
-                <div class="md:h-auto mr-3 md:w-1/2">
-                  <label class="block text-sm">
-                    <span class="text-gray-700 dark:text-gray-400">전화번호</span>
-                    <input
-                        class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                        placeholder="010-1234-5678"
-                        required
-                    >                    
-                  </label>
-                </div>
-              </div> 
-
-              <div class="flex flex-col md:flex-row mt-4">
-                <div class="md:h-auto mr-3 md:w-1/2">
-                  <label class="block text-sm">
-                    <span class="text-gray-700 dark:text-gray-400">주소</span>
-                    <input
-                        class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input datepicker"
-                        placeholder="주소"
-                    >                    
-                  </label>
-                </div>
-
-                <div class="md:h-auto mr-3 md:w-1/2">
-                  <label class="block text-sm">
-                    <span class="text-gray-700 dark:text-gray-400">상세주소</span>
-                    <input
-                        class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input datepicker"
-                        placeholder="상세주소"
-                    >                    
-                  </label>
-                </div>
-              </div>               
-            </div>
-
-            <!-- Validation inputs -->
-            <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
-              추가정보
-            </h4>
-            <div class="w-full px-4 py-3 mb-8 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-              <div class="flex flex-col md:flex-row mt-4">
-                <div class="md:h-auto mr-3 md:w-1/2">
-                  <label class="block text-sm">
-                    <span class="text-gray-700 dark:text-gray-400">취미</span>
-                    <input
-                        class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input datepicker"
-                        placeholder="운동, 여행"
-                    >                    
-                  </label>
-                </div>
-
-                <div class="md:h-auto mr-3 md:w-1/2">
-                  <label class="block text-sm">
-                    <span class="text-gray-700 dark:text-gray-400">종교</span>
-                    <input
-                        class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input datepicker"
-                        placeholder="불교, 기독교, 천주교, 기타"
-                    >                    
-                  </label>
-                </div>
-              </div> 
-
-              <div class="flex flex-col md:flex-row mt-4">
-                <div class="md:h-auto mr-3 md:w-1/2">
-                  <label class="block text-sm">
-                    <span class="text-gray-700 dark:text-gray-400">좌우명</span>
-                    <input
-                        class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input datepicker"
-                        placeholder=""
-                    >                    
-                  </label>
-                </div>
-
-                <div class="md:h-auto mr-3 md:w-1/2">
-                  <label class="block text-sm">
-                    <span class="text-gray-700 dark:text-gray-400">결혼여부</span>
-                    <select class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
-                      <option value="0" selected>기혼</option>
-                      <option value="1">미혼</option>
-                  </select>                   
-                  </label>
-                </div>
-              </div>               
-            </div>    
-            
-            <div class="w-full px-4 py-3 mb-8">
-              <div class="flex flex-col md:flex-row mt-4">
-                <div class="md:h-auto mr-3 md:w-1/2">
-                  <button
-                  class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple mr-3"
-                  aria-label="Edit">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-database-fill" viewBox="0 0 16 16">
-                    <path d="M3.904 1.777C4.978 1.289 6.427 1 8 1s3.022.289 4.096.777C13.125 2.245 14 2.993 14 4s-.875 1.755-1.904 2.223C11.022 6.711 9.573 7 8 7s-3.022-.289-4.096-.777C2.875 5.755 2 5.007 2 4s.875-1.755 1.904-2.223"/>
-                    <path d="M2 6.161V7c0 1.007.875 1.755 1.904 2.223C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777C13.125 8.755 14 8.007 14 7v-.839c-.457.432-1.004.751-1.49.972C11.278 7.693 9.682 8 8 8s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972"/>
-                    <path d="M2 9.161V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13s3.022-.289 4.096-.777C13.125 11.755 14 11.007 14 10v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972"/>
-                    <path d="M2 12.161V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972"/>
-                  </svg>
-                  &nbsp;저&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;장&nbsp;
-                </button>  
-                </div>
-
-                <div class="md:h-auto mr-3 md:w-1/2 justify-end">
-                  <button
-                    class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple mr-3"
-                    aria-label="Edit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                <!-- 저장버튼 -->
+                <div class="md:h-auto sm:mt-auto md:w-1/2">                  
+                  <button   
+                    id="btnSeve"             
+                    class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple mr-3"
+                    aria-label="Edit"
+                    type="button"
+                    onclick="fnSave()"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-database-fill" viewBox="0 0 16 16">
+                      <path d="M3.904 1.777C4.978 1.289 6.427 1 8 1s3.022.289 4.096.777C13.125 2.245 14 2.993 14 4s-.875 1.755-1.904 2.223C11.022 6.711 9.573 7 8 7s-3.022-.289-4.096-.777C2.875 5.755 2 5.007 2 4s.875-1.755 1.904-2.223"/>
+                      <path d="M2 6.161V7c0 1.007.875 1.755 1.904 2.223C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777C13.125 8.755 14 8.007 14 7v-.839c-.457.432-1.004.751-1.49.972C11.278 7.693 9.682 8 8 8s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972"/>
+                      <path d="M2 9.161V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13s3.022-.289 4.096-.777C13.125 11.755 14 11.007 14 10v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972"/>
+                      <path d="M2 12.161V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972"/>
                     </svg>
-                    &nbsp;회원조회&nbsp;
                   </button>  
                 </div>
-              </div>             
-            </div>            
+  
+                <!-- 회원조회버튼 -->
+                <div class="flex md:h-auto sm:mt-auto md:w-1/2 sm:justify-end">
+                  <button
+                    class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple mr-3"
+                    aria-label="Search"
+                    type="button"
+                  >                    
+                    <a href="list.html">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                      </svg>
+                    </a>
+                  </button> 
+                </div>               
+              </div>
+  
+              <!-- <div class="w-full px-4 py-3 mb-8">
+                <div class="flex flex-col md:flex-row mt-4">
+                  <div class="md:h-auto mr-3 md:w-1/2">
+                    <button
+                    class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple mr-3"
+                    aria-label="Edit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-database-fill" viewBox="0 0 16 16">
+                      <path d="M3.904 1.777C4.978 1.289 6.427 1 8 1s3.022.289 4.096.777C13.125 2.245 14 2.993 14 4s-.875 1.755-1.904 2.223C11.022 6.711 9.573 7 8 7s-3.022-.289-4.096-.777C2.875 5.755 2 5.007 2 4s.875-1.755 1.904-2.223"/>
+                      <path d="M2 6.161V7c0 1.007.875 1.755 1.904 2.223C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777C13.125 8.755 14 8.007 14 7v-.839c-.457.432-1.004.751-1.49.972C11.278 7.693 9.682 8 8 8s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972"/>
+                      <path d="M2 9.161V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13s3.022-.289 4.096-.777C13.125 11.755 14 11.007 14 10v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972"/>
+                      <path d="M2 12.161V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972"/>
+                    </svg>
+                    &nbsp;저&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;장&nbsp;
+                  </button>  
+                  </div>
+  
+                  <div class="md:h-auto mr-3 md:w-1/2 sm:justify-end">
+                    <button
+                      class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple mr-3"
+                      aria-label="Edit">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                      </svg>
+                      &nbsp;회원조회&nbsp;
+                    </button>  
+                  </div>
+                </div>             
+              </div>             -->
+          </form>          
         </main>
       </div>
     </div>
